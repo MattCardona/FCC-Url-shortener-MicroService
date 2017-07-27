@@ -23,4 +23,4 @@ Lets say you get this https://herokuappname.com/new/45. You can insert this in t
 
 Project can be found at: https://url-shorter-microservice.herokuapp.com
 
-Created By Matt C. Copyright &copy 2017
+Created By Matt C. Copyright &copy; 2017
