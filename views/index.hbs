@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FCC URL Shortener Microservice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/assets/main.css">
+</head>
+<body>
+  <h2>URL Shortener Microservice</h2>
+  <div class="userStory">
+    <li>You can pass a URL as a parameter and you will receive a shortened URL version in the JSON response. Example you will pass, lets say Google to the URL add /new/https://www.google.com</li>
+
+    <li>When you vist the shortened URL version, you will be redirected to your original link.</li>
+  </div>
+  <div class="exampleUsage">
+    <h3>Example usage: </h3>
+      <a href="">https://herokuappname.com/new/https://www.google.com</a><br>
+      <a href="">https://herokuappname.com/new/https://www.github.com</a>
+  </div>
+  <div class="exampleOutput">
+    <h3>Example output: </h3>
+      <p>{"original_url":"https://www.google.com", "short_url":"https://herokuappname.com/new/45"}</p>
+  </div>
+  <div class="exampleUseOutput">
+    <h3>Example output usage: </h3>
+    <p>https://herokuappname.com/new/45</p>
+    <p>Which will redirect you to your origianl URL you typed in.</p>
+  </div>
+</body>
+</html>
