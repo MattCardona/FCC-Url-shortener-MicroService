@@ -1,5 +1,5 @@
 const validator = require('validator');
-
+//fix if they type in the same url to delete the old version and make new versions
 var obj = {}
 
 var midd = (req, res, next) => {
@@ -25,10 +25,26 @@ var midd = (req, res, next) => {
        next();
      }
   }else if(obj[url] !== undefined){
-    var copy = obj[url].ogUrl;
-    res.redirect(301, obj[url].ogUrl);
-    delete obj[copy];
-    delete obj[url];
+    if(isNaN(url)){
+      delete obj[obj[url].reUrl];
+      delete obj[url];
+      obj[url]= {
+        host: req.protocol + req.get('host'),
+        ogUrl: url,
+        full: fullUrl,
+        reUrl: Math.floor(Math.random() * 20) + 1
+         }
+      obj[obj[url].reUrl]={
+        ogUrl: url
+       }
+       req.obj = {url, redirectUrl: redirectUrl + obj[url].reUrl};
+       next();
+    }else{
+       var copy = obj[url].ogUrl;
+       res.redirect(301, obj[url].ogUrl);
+       delete obj[copy];
+       delete obj[url];
+    }
   }
 };
 
