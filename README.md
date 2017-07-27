@@ -7,9 +7,9 @@ URL-Shortener-MicroService
 
 Example usage:
 
-[HerokuAppNameHere/new/https://www.google.com](insertActualUrlHere)
+[https://url-shorter-microservice.herokuapp.com/new/https://www.google.com](https://url-shorter-microservice.herokuapp.com/new/https://www.google.com)
 
-[HerokuAppNameHere/new/https://www.github.com](insertActualUrlHere)
+[https://url-shorter-microservice.herokuapp.com/new/https://www.github.com](https://url-shorter-microservice.herokuapp.com/new/https://www.github.com)
 
 Example output:
 
@@ -21,5 +21,6 @@ Example output usage:
 
 Lets say you get this https://herokuappname.com/new/45. You can insert this in the URL and it will redirect you to you original URL.
 
+Project can be found at: https://url-shorter-microservice.herokuapp.com
 
 Created By Matt C. Copyright 2017
