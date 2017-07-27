@@ -4,9 +4,8 @@ var obj = {}
 
 var midd = (req, res, next) => {
   var url = req.params[0];
-  var fullUrl = req.protocall + req.get('host') + req.url;
-  var redirectUrl = req.protocall + req.get('host') + '/new/';
-
+  var fullUrl = req.protocol + req.get('host') + req.url;
+  var redirectUrl = req.protocol + '://' + req.get('host') + '/new/';
   if(obj[url] === undefined){
     if(!validator.isURL(url)){
       res.status(400).send("Error the URL is invalid, please check for errors.");
@@ -14,7 +13,7 @@ var midd = (req, res, next) => {
       next();
     }else{
       obj[url]= {
-        host: req.protocall + req.get('host'),
+        host: req.protocol + req.get('host'),
         ogUrl: url,
         full: fullUrl,
         reUrl: Math.floor(Math.random() * 20) + 1
