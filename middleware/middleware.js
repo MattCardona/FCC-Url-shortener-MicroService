@@ -22,7 +22,7 @@ var midd = (req, res, next) => {
       obj[obj[url].reUrl]={
         ogUrl: url
        }
-       req.obj = {url, fullUrl, redirectUrl: redirectUrl + obj[url].reUrl};
+       req.obj = {url, redirectUrl: redirectUrl + obj[url].reUrl};
        next();
      }
   }else if(obj[url] !== undefined){

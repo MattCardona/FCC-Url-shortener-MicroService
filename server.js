@@ -6,6 +6,8 @@ const {midd} = require('./middleware/middleware.js');
 var app = express();
 var port = process.env.PORT || 3000;
 
+hbs.registerPartials(__dirname + '/views/partials');
+
 app.set('view engine', 'hbs');
 app.use('/assets', express.static(__dirname + '/public'));
 
